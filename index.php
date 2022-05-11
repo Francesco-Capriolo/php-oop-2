@@ -15,7 +15,8 @@ $biscotti= new Food('biscotti',12.3,"biscotti buonissimi","farina,acqua,uova","o
 $croccantini= new Food('croccantini',12.3,"croccantini buonissimi","farina,acqua,uova","ottobre",2,2);
 
 
-$giangi = new User('giangi','giungi','gigi','gigiani@gmail.com',new CreditCard(1141411414141444,2025,141,100));
+$giangi = new User('giangi','giungi','gigi','gigiani@gmail.com',new CreditCard(114141141414,2025,141,100),false);
+$luigia = new User('luigia','ligia','lilla','lilliana@gmail.com',new CreditCard(114252562652,2020,141,50),true);
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +30,15 @@ $giangi = new User('giangi','giungi','gigi','gigiani@gmail.com',new CreditCard(1
 <body>
     <?php 
     var_dump($biscotti);
+    var_dump($giangi);
+    var_dump($luigia);
+    echo $giangi->getName();
+    echo "<br>";
+    echo "Disponibilità: " . $giangi->getDiscount();
+    echo "<br>";
+    echo $luigia->getName();
+    echo "<br>";
+    echo "Disponibilità: " . $luigia->getDiscount();
     ?>
 </body>
 </html>

@@ -45,8 +45,9 @@ class CreditCard{
         return $this->cvc;
     }
 
-    public function getBalance(){
-        return $this->balance . '€';
+    public function getBalance()
+    {
+        return $this->creditCard->balance . '€';
     }
 }
 ?>
